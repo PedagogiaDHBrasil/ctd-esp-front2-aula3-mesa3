@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { CharactersContext } from "../../context/CharacterContext";
-import Picture from "../Picture";
+import Picture from "../Picture/index.tsx";
 
 const ListPicture = () => {
   const { characters } = useContext(CharactersContext);
