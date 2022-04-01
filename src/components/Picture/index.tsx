@@ -1,7 +1,16 @@
 import React, { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
 
-const Picture = ({ character }) => {
+interface PictureProps {
+  character: {
+    id: number;
+    imageUrl: string;
+    title: string;
+    desc: string;
+  };
+}
+
+const Picture = ({ character }: PictureProps) => {
   const { user, favoriteCharacterUser } = useContext(UserContext);
   const isFavorite = user?.favoriteCharacters?.includes(character.id);
 
